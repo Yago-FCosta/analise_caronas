@@ -11,8 +11,39 @@ Trabalhando com um banco de dados, analisar dados de concorrentes e testar hipó
 - Numpy e scipy: Biblioteca que visa possibilitar a computação numérica com Python 
 - Matplotlib.pyplot e seaborn: Bibliotecas para criação de gráficos.
 
-## Tabela
+## Tabelas
+Para este projeto foram construídas tabelas através de consultas a banco de dados utilizando SQL.
 
+**Descrição Banco de Dados**
+Um banco de dados com informações sobre corridas de táxi em Chicago:
+
+- tabela neighborhoods: dados sobre os bairros da cidade
+  - nome: nome do bairro
+  - neighborhood_id: código do bairro
+
+- tabela cabs: dados sobre os táxis
+  - cab_id: código do veículo
+  - vehicle_id: a identificação técnica do veículo
+  - company_name: a empresa proprietária do veículo
+
+- tabela trips: dados sobre corridas
+  - trip_id: código da corrida
+  - cab_id: código do veículo que opera a corrida
+  - start_ts: data e hora do início da corrida (tempo arredondado para a hora)
+  - end_ts: data e hora do fim da corrida (tempo arredondado para a hora)
+  - duration_seconds: duração da corrida em segundos
+  - distance_miles: distância do percurso em milhas
+  - pickup_location_id: código do bairro de retirada
+  - dropoff_location_id: código do bairro de entrega
+
+- tabela weather_records: dados sobre o clima
+  - record_id: código de registro meteorológico
+  - ts: gravar data e hora (tempo arredondado para a hora)
+  - temperatura: temperatura quando o registro foi feito
+  - descrição: breve descrição das condições meteorológicas, ex. "chuva leve" ou "nuvens esparsas"
+
+**Esquema de tabela**
+![image](https://github.com/user-attachments/assets/233bd62b-6aa0-4282-8fd0-e627cea652b3)
 
 ## Metodologia
 **Análise Exploratória de Dados**
