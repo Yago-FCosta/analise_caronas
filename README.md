@@ -45,41 +45,36 @@ Um banco de dados com informações sobre corridas de táxi em Chicago:
 **Esquema de tabela**
 ![image](https://github.com/user-attachments/assets/233bd62b-6aa0-4282-8fd0-e627cea652b3)
 
+**Tabelas Utilizadas**
+- moved_project_sql_result_01: número de corridas para cada empresa de táxi
+- moved_project_sql_result_04: número médio de viagens que terminaram em cada bairro
+- moved_project_sql_result_07: dados sobre viagens do Loop para o Aeroporto Internacional O'Hare.
+
 ## Metodologia
+**Extração Dados Banco**
+- Querys d SQl para realizar a extração dos dados necessários para análise 
+
 **Análise Exploratória de Dados**
 - Importar as bibliotecas necessárias
 - Carregar e visualizar os dados
 
-**Pré-processamento***
-- Identificar e tratar valores ausentes
-- Renomear colunas para nomes intuitivos e padronizados
-- Corrigir valores anômalos
-- Remover valores duplicados
-
 **Análise dos Dados**
-- Verificando quantos jogos foram lançados por ano
-- Variação de vendas por plataforma
-    - Geral
-    - Rating
-    - Região
-- Analisando vendas por genre
-    - Global
-    - Regiões
+- Quantidade de viagens por companhia
+- Quantidade de viagens médias por bairro
+
 **Criando e Validando Hipóteses**
-- As classificações médias dos usuários das plataformas Xbox One e PC são as mesmas
-- As classificações médias de usuários para os gêneros Action (ação) e Sports (esportes) são diferentes
+- A duração média dos passeios do Loop para o Aeroporto Internacional O'Hare muda nos sábados chuvosos
 
 ## Resultados
-
+Podemos rejeitar a hipótese nula, ou seja, podemos rejeitar que o tempo médio da viagem nos sábados independem se a condição do tempo é boa ou ruim.
+Para testar esta hipótese utilizei o método de Igualdade entre as médias de duas populações, principalmente devido ao fato da diferença de tamanho entre os conjuntos de dados, caso estivessem iguais, teria utilizado o dados da mesma população onde a diferença entre elas seriam a condição de tempo.
 
 ## Aprendizados
-- Análise de dados: interpretação e extração de insights valiosos a partir de grandes volumes de dados.
-- Limpeza de dados: identificação e correção de valores ausentes, duplicados e anômalos.
+- Consultas SQL: extração de direto de bancos de dados utilizando SQL.
+- Análise de dados: interpretação e extração de insights valiosos a partir de dados.
 - Manipulação de tabelas: reorganização e transformação de dados para facilitar a análise.
 - Criação de gráficos: utilização de bibliotecas como Matplotlib, Seaborn para visualizar dados de maneira intuitiva e informativa.
-- Pré-processamento de dados: preparação dos dados para análise.
 - Formulação de hipóteses: desenvolvimento e teste de suposições sobre o comportamento dos clientes com base nos dados.
-- Visualização de dados: criação de gráficos e outros tipos de visualizações para identificar padrões e tendências.
 - Documentação de projetos: elaboração de documentação clara e detalhada para garantir que o projeto seja compreensível e replicável.
 - Utilização de bibliotecas e ferramentas: aplicação prática de diversas bibliotecas e ferramentas do ecossistema Python.
 - Tomada de decisões baseadas em dados: uso de insights derivados da análise de dados para orientar decisões estratégicas.
